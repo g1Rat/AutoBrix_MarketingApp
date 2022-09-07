@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_total"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/empname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/emp_target_count"
+        android:fontFamily="@font/zonapro_bold"
+        android:text="Raja Kumar"
+        android:textColor="@color/black"
+        android:textSize="14dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/emp_target_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/maximise"
+        android:fontFamily="@font/zonapro_semibold"
+        android:gravity="center_vertical"
+        android:text="(10)"
+        android:textColor="@color/black"
+        android:textSize="16dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/empno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/empname"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/zonapro_bold"
+        android:text="9000000000"
+        android:textColor="@color/black"
+        android:textSize="14dp">
+
+    </TextView>
+
+    <View
+        android:id="@+id/tv5"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/empno"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey">
+
+    </View>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv5">
+        <TextView
+
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/zonapro_semibold"
+            android:text="show"
+            android:textColor="@color/black"
+            android:textSize="14dp">
+
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/rl_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv5">
+
+        <TextView
+
+            android:id="@+id/noresults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:fontFamily="@font/zonapro_semibold"
+            android:text="No Results Found"
+            android:textColor="@color/cement"
+            android:textSize="14dp">
+
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_emp_dealers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/maximise"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:src="@drawable/add_black">
+
+    </ImageView>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/minimise"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:src="@drawable/minimize">
+
+    </ImageView>
+    <ProgressBar
+       android:visibility="gone"
+        android:id="@+id/progress"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentRight="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/black"
+        android:layout_marginRight="25dp">
+
+    </ProgressBar>
+</RelativeLayout>

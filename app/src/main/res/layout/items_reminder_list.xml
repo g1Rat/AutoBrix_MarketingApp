@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/greywhite"
+        android:padding="8dp"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:id="@+id/dealer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/reminderdate"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Shobu cyril"
+            android:textColor="@color/black"
+            android:textSize="16dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dealer_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/iv_maps_grey"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Collect Cash"
+            android:textColor="@color/orange"
+            android:textSize="14dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reason"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/iv_maps_grey"
+            android:fontFamily="@font/poppins_regular"
+            android:text="dealer not avaiable"
+            android:textColor="@color/black"
+            android:textSize="14dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/reminderdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/zonapro_regular"
+            android:text="10:30 AM, 12-APR-2021"
+            android:textColor="@color/black"
+            android:textSize="14dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/remindertime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/zonapro_regular"
+            android:text="7:30 AM"
+            android:textColor="@color/blue"
+            android:textSize="14dp"
+            android:visibility="gone">
+
+        </TextView>
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_maps"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/reminderdate"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:padding="8dp"
+            android:src="@drawable/maps_icon">
+
+        </ImageView>
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_maps_grey"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/reminderdate"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:padding="8dp"
+            android:src="@drawable/map_grey">
+
+        </ImageView>
+
+    </RelativeLayout>
+</RelativeLayout>

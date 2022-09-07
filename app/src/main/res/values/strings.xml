@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MarketingApp</string>
+    <string name="cancel">cancel</string>
+    <string name="more">...  <u>View more</u></string>
+    <string name="less"><u>View less</u></string>
+    <string name="app_version_name">1.5</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+</resources>

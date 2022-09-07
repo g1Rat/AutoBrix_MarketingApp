@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/greywhite"
+    android:padding="5dp"
+    android:layout_margin="10dp">
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="18dp">
+
+        <TextView
+            android:id="@+id/emp_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/iv_selected"
+            android:fontFamily="@font/zonapro_semibold"
+            android:text="ABC Cars"
+            android:textColor="@color/black"
+            android:textSize="14dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/emp_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emp_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/iv_selected"
+            android:fontFamily="@font/zonapro_semibold"
+            android:text="90000000"
+            android:textColor="@color/black"
+            android:textSize="14dp">
+
+        </TextView>
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_selected"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/check_service_completed">
+
+        </ImageView>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,2 @@
+rootProject.name = "AutoBrix_MarketingApp"
+include ':app'

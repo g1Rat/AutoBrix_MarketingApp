@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AddDealerRequest">
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/left_arrow">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/zonapro_semibold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="Add Inspection Request"
+            android:textSize="16dp">
+
+        </TextView>
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/rl2"
+        android:background="@color/greywhite">
+
+    </View>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/selectdealer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/zonapro_semibold"
+                    android:text="Select Dealer"
+                    android:textColor="@color/black"
+                    android:textSize="14dp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/forward_arrow">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/rl4"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#e5e5e5">
+
+            </View>
+            <LinearLayout
+
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_presale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/blue"
+                    android:background="@drawable/cardview_dealership"
+                    android:onClick="onpresaleselect">
+
+                    <TextView
+                        android:id="@+id/tv_presale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/zonapro_semibold"
+                        android:gravity="center"
+                        android:text="Pre Sale"
+                        android:textColor="@color/white"
+                        android:textSize="16dp">
+
+                    </TextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_postsale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#f2f2f7"
+                    android:background="@drawable/cardview_dealership"
+                    android:onClick="onpostsaleselect">
+
+                    <TextView
+                        android:id="@+id/tv_postsale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/zonapro_semibold"
+                        android:gravity="center"
+                        android:text="Post Sale"
+                        android:textColor="@color/black"
+                        android:textSize="16dp">
+
+                    </TextView>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+
+                android:id="@+id/rl_car_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear1"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/label_vehno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/zonapro_semibold"
+                    android:gravity="center"
+                    android:text="Car Count: "
+                    android:textColor="@color/black"
+                    android:textSize="16dp">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/entered_carcount"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/label_vehno"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@null"
+                    android:fontFamily="@font/zonapro_regular"
+                    android:gravity="center_vertical"
+                    android:hint="10"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/lightgrey"
+                    android:textSize="16dp">
+
+                </EditText>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/entered_carcount"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#e5e5e5">
+
+                </View>
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:id="@+id/rl_inspection_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_car_count"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/label_paidon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/zonapro_semibold"
+                    android:gravity="center"
+                    android:text="Inspection date: "
+                    android:textColor="@color/black"
+                    android:textSize="16dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_inspection_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/label_paidon"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/zonapro_semibold"
+                    android:gravity="center_vertical"
+                    android:hint="dd/mm/yyyy"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="18dp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/label_paidon"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/tv_inspection_on"
+                    android:src="@drawable/calendarweek">
+
+                </ImageView>
+
+
+            </RelativeLayout>
+            <View
+
+                android:id="@+id/line_paidon"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/rl_inspection_on"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:background="#e5e5e5">
+
+            </View>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_veh_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_paidon"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tv_vehno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/zonapro_semibold"
+                    android:gravity="center"
+                    android:text="Vehicle Number"
+                    android:textColor="@color/black"
+                    android:textSize="16dp">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/selected_vehno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_vehno"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toLeftOf="@+id/progress_bar"
+                    android:background="@null"
+                    android:capitalize="characters"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:fontFamily="@font/zonapro_regular"
+                    android:gravity="start"
+                    android:hint="eg: KA02AF3456"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="15"
+                    android:textColor="@color/black"
+                    android:textSize="16dp">
+
+                </EditText>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/tv_vehno"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone">
+
+                </ProgressBar>
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/tv_vehno"
+                   android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/cancel"
+                    android:visibility="gone">
+
+                </ImageView>
+
+                <View
+                    android:id="@+id/line_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5px"
+                    android:layout_below="@+id/selected_vehno"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/blue">
+
+                </View>
+            </RelativeLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/add_car"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rl_veh_no"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cardview_dealership"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Add Car"
+                android:textColor="@color/white"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_post_sale"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/add_car">
+
+
+                <TextView
+                    android:id="@+id/tv_post_select_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/zonapro_semibold"
+                    android:gravity="center"
+                    android:text="Select Date"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:visibility="gone">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:id="@+id/post_selected_date_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/tv_post_select_date"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:onClick="onpostselecteddate"
+                    android:padding="8dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_calendar3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/calendarweek">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/tv_post_selecteddate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/iv_calendar3"
+                        android:fontFamily="@font/zonapro_semibold"
+                        android:hint="dd/mm/yyyy"
+                        android:textColor="@color/black"
+                        android:textSize="18dp">
+
+                    </TextView>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5px"
+                    android:layout_below="@+id/post_selected_date_rl"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/blue"
+                    android:visibility="gone"></View>
+
+                <TextView
+                    android:id="@+id/tv_select_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/post_selected_date_rl"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/zonapro_semibold"
+                    android:gravity="center"
+                    android:text="Select Location"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"></TextView>
+
+                <LinearLayout
+                    android:id="@+id/linear2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_select_location"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dealership"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/cardview_dealership"
+                        android:backgroundTint="#f2f2f7"
+                        android:onClick="ondealershipselect"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_dealership"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/zonapro_semibold"
+                            android:gravity="center"
+                            android:text="Dealership"
+                            android:textColor="@color/black"
+                            android:textSize="14dp">
+
+                        </TextView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_customer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cardview_dealership"
+                        android:backgroundTint="#f2f2f7"
+                        android:onClick="oncustomerselect"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_customer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/zonapro_semibold"
+                            android:gravity="center"
+                            android:text="Customer"
+                            android:textColor="@color/black"
+                            android:textSize="14dp">
+
+                        </TextView>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/linear2"
+                    android:layout_marginBottom="20dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_customer_postsale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="8dp"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:id="@+id/title_customerdetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/zonapro_semibold"
+                            android:gravity="center"
+                            android:text="Customer details"
+                            android:textColor="@color/black"
+                            android:textSize="16dp">
+
+                        </TextView>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title_customerdetails"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/zonapro_regular"
+                                android:gravity="center"
+                                android:text="Name"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"></TextView>
+
+                            <EditText
+                                android:id="@+id/selected_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_name"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@null"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                                android:fontFamily="@font/zonapro_regular"
+                                android:gravity="start"
+                                android:hint="Customer Name"
+                                android:maxLines="1"
+                                android:textColor="@color/black"
+                                android:textSize="16dp">
+
+                            </EditText>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5px"
+                                android:layout_below="@+id/selected_name"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/lightgrey">
+
+                            </View>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_name"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:id="@+id/tv_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/zonapro_regular"
+                                android:gravity="center"
+                                android:text="Phone Number"
+                                android:textColor="@color/black"
+                                android:textSize="16dp">
+
+                            </TextView>
+
+                            <EditText
+                                android:id="@+id/selected_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_no"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@null"
+                                android:fontFamily="@font/zonapro_regular"
+                                android:gravity="start"
+                                android:hint="Customer Number"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:textColor="@color/black"
+                                android:textSize="16dp">
+
+                            </EditText>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5px"
+                                android:layout_below="@+id/selected_no"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/lightgrey">
+
+                            </View>
+                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/tv_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_no"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/zonapro_regular"
+                            android:gravity="center"
+                            android:text="Location"
+                            android:textColor="@color/black"
+                            android:textSize="18dp">
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/entered_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_location"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@null"
+                            android:fontFamily="@font/zonapro_regular"
+                            android:gravity="start"
+                            android:hint="JP Nagar"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/lightgrey"
+                            android:textSize="18dp">
+
+                        </EditText>
+
+                        <View
+                            android:id="@+id/line_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:layout_below="@+id/entered_location"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/greywhite">
+
+                        </View>
+
+                        <TextView
+                            android:id="@+id/tv_enteraddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line_10"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/zonapro_semibold"
+                            android:gravity="center"
+                            android:text="Enter Address"
+                            android:textColor="@color/black"
+                            android:textSize="16dp">
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/selected_customer_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_below="@+id/tv_enteraddress"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/cardview_lightgrey_margined"
+                            android:fontFamily="@font/zonapro_regular"
+                            android:gravity="start"
+                            android:hint="Enter customer address  here"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="16dp">
+
+                        </EditText>
+                    </RelativeLayout>
+                </androidx.core.widget.NestedScrollView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_type1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_paidon"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:onClick="ontype1">
+
+                <ImageView
+                    android:id="@+id/unselected"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/untick">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/selected"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/blue_tick"
+                    android:visibility="invisible">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/service_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/unselected"
+                    android:fontFamily="@font/zonapro_semibold"
+                    android:text="Inspection for sale"
+                    android:textColor="@color/black"
+                    android:textSize="16dp">
+
+                </TextView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_type1"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:onClick="ontype2">
+
+                <ImageView
+                    android:id="@+id/unselected1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/untick">
+
+                </ImageView>
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/selected1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/blue_tick">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/unselected1"
+                    android:fontFamily="@font/zonapro_semibold"
+                    android:text="Regular Inspection"
+                    android:textColor="@color/black"
+                    android:textSize="16dp">
+
+                </TextView>
+            </RelativeLayout>
+          <!--  <RadioButton
+                android:id="@+id/check1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/line_paidon"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:text="Inspection for sale"
+                android:textColor="@color/black"
+                android:textSize="16dp">
+
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/check2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/check1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/zonapro_semibold"
+                android:textSize="16dp"
+                android:text="Regular Inspection">
+
+            </RadioButton>-->
+
+            <TextView
+                android:id="@+id/submit_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/cardview_dealership"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:onClick="onreqserviceselect"
+                android:padding="10dp"
+                android:text="SUBMIT"
+                android:textColor="@color/white"
+                android:textSize="15dp">
+
+            </TextView>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/greywhite"
+        android:padding="8dp">
+
+
+        <TextView
+            android:id="@+id/dname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/zonapro_semibold"
+            android:text="Rajesh Kumar "
+            android:textColor="@color/black"
+            android:textSize="14dp">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/reqdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dname"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/zonapro_semibold"
+            android:text="10/08/21"
+            android:textColor="@color/black"
+            android:textSize="14dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/collecteddate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dname"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:fontFamily="@font/zonapro_semibold"
+            android:text="12/08/21"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:visibility="gone">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reqdate"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Requested On"
+            android:textColor="@color/text_profile"
+            android:textSize="11dp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/collecteddate"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Updated On"
+            android:textColor="@color/text_profile"
+            android:textSize="11dp"
+            android:visibility="gone">
+
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/rl_mtrl_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label1"
+            android:layout_marginTop="10dp">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/view_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rv2"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/zonapro_regular"
+                android:text="@string/more"
+                android:textColor="@color/text_profile"
+                android:textSize="14dp"
+                android:visibility="gone">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/view_less"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rv2"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/zonapro_regular"
+                android:text="@string/less"
+                android:textColor="@color/text_profile"
+                android:textSize="14dp"
+                android:visibility="gone">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/status_label"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_mtrl_list"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/zonapro_regular"
+            android:text="Status           :"
+            android:textColor="@color/text_profile"
+            android:textSize="14dp">
+
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/rl_statusmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_mtrl_list"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/status_label">
+
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:text="Collected"
+                android:textColor="@color/orange"
+                android:textSize="14dp">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/status"
+                android:src="@drawable/dropdown">
+
+            </ImageView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/comments_label"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_statusmenu"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/zonapro_regular"
+            android:text="Comments :"
+            android:textColor="@color/text_profile"
+            android:textSize="14dp">
+
+        </TextView>
+
+        <com.skyhope.showmoretextview.ShowMoreTextView
+            android:id="@+id/status_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_statusmenu"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/comments_label"
+            android:fontFamily="@font/zonapro_regular"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="14dp">
+
+        </com.skyhope.showmoretextview.ShowMoreTextView>
+
+        <Spinner
+            android:id="@+id/mtrl_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_mtrl_list"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/zonapro_semibold"
+            android:text="Collected"
+            android:textColor="@color/orange"
+            android:textSize="14dp"
+            android:visibility="gone">
+
+        </Spinner>
+
+    </RelativeLayout>
+
+</RelativeLayout>

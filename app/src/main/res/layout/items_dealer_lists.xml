@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/greywhite"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:elevation="12dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="30dp">
+
+            <ImageView
+                android:id="@+id/d_logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/profilepic">
+
+            </ImageView>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/cv1">
+
+            <TextView
+                android:id="@+id/d_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/zonapro_semibold"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="14dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/d_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/d_name"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Phone"
+                android:textColor="@color/black"
+                android:textSize="14dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/d_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/d_phone"
+                android:fontFamily="@font/zonapro_regular"
+                android:text="Address"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:visibility="gone">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/label_created"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/d_location"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:hint="Mar.Exec:"
+                android:textSize="14dp"
+                android:visibility="gone">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/createdby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/d_location"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/label_created_no"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="emp name"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:visibility="gone">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/label_created_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/createdby"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:hint="Mar Ex Num:"
+                android:textSize="14dp"
+                android:visibility="gone">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/createdno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/createdby"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/label_created_no"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="emp no"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:visibility="gone">
+
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/dealer_type"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="A.D"
+                android:textColor="@color/red"
+                android:textSize="14dp">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/checkbox_empty"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/checkbox"
+                android:visibility="gone">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/checkbox_checked"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/checkbox_tic"
+                android:visibility="gone">
+
+            </ImageView>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashBoardPage">
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toLeftOf="@+id/rl_menu"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/profilepic">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/emp_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/profile"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="start"
+            android:text="Hi Avinash"
+            android:textColor="@color/black"
+            android:textSize="14dp">
+
+        </TextView>
+    </RelativeLayout>
+    <RelativeLayout
+            android:id="@+id/rl_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:backgroundTint="@color/blue"
+            android:background="@drawable/toggle_cardview"
+            >
+
+        <TextView
+            android:id="@+id/pick_month"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="this month"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14dp">
+
+        </TextView>
+        </RelativeLayout>
+    <RelativeLayout
+
+        android:visibility="gone"
+        android:id="@+id/rl_emp_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl1"
+        android:layout_centerVertical="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_services"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@+id/line_centre"
+            android:background="@drawable/cardview_lightorange_margined"
+            android:backgroundTint="@color/greywhite"
+            android:elevation="10dp"
+            android:onClick="onDealerSelect">
+
+
+            <View
+                android:id="@+id/line_services"
+                android:layout_width="60dp"
+                android:layout_height="2px"
+                android:layout_below="@+id/tv_services"
+                android:layout_marginStart="20dp"
+
+                android:layout_marginEnd="20dp"
+                android:background="@color/grey">
+
+            </View>
+
+            <TextView
+                android:id="@+id/tv_services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"
+                android:text="My Dealers "
+                android:textColor="@color/blue"
+                android:textSize="18dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_no_of_dealers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_services"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:textColor="@color/blue"
+                android:textSize="30dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_services"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/tv_no_of_dealers"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:text="(Total)"
+                android:textColor="@color/cement"
+                android:textSize="12dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/new_dealers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_no_of_dealers"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:textColor="@color/light_blue_wd"
+                android:textSize="25dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_no_of_dealers"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/new_dealers"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:text="(new)"
+                android:textColor="@color/cement"
+                android:textSize="12dp">
+
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@+id/line_centre"
+            android:background="@drawable/cardview_lightorange_margined"
+            android:backgroundTint="@color/greywhite"
+            android:elevation="10dp"
+            android:onClick="todaystaskselect">
+
+            <TextView
+                android:id="@+id/no_of_updates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/zonapro_bold"
+                android:gravity="center"
+                android:textColor="@color/blue"
+                android:textSize="30dp">
+
+            </TextView>
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="2px"
+                android:layout_below="@+id/tv_reinpect"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/grey">
+
+            </View>
+
+            <TextView
+                android:id="@+id/tv_reinpect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="start"
+                android:lineSpacingExtra="5dp"
+                android:text="Daily\nUpdates"
+                android:textColor="@color/blue"
+                android:textSize="18dp">
+
+            </TextView>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_centre"
+            android:layout_width="1px"
+            android:layout_height="1px"
+            android:layout_centerInParent="true"
+            android:background="@color/orange">
+
+        </View>
+
+        <View
+            android:id="@+id/line_centre2"
+            android:layout_width="1px"
+            android:layout_height="1px"
+            android:layout_below="@+id/rl_services"
+            android:layout_centerHorizontal="true"
+            android:background="@color/orange">
+
+        </View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@+id/line_centre2"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@+id/line_centre"
+            android:background="@drawable/cardview_lightorange_margined"
+            android:backgroundTint="@color/greywhite"
+            android:elevation="10dp"
+            android:onClick="ondealer_requests">
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="2px"
+                android:layout_below="@+id/tv_inspection"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/grey">
+
+            </View>
+
+            <TextView
+                android:id="@+id/no_of_dealer_req"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/zonapro_bold"
+                android:gravity="center"
+                android:textColor="@color/blue"
+                android:textSize="30dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_inspection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="start"
+                android:lineSpacingExtra="5dp"
+                android:text="Dealer\nRequests"
+                android:textColor="@color/blue"
+                android:textSize="18dp">
+
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@+id/line_centre2"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@+id/line_centre"
+            android:background="@drawable/cardview_lightorange_margined"
+            android:backgroundTint="@color/greywhite"
+            android:elevation="10dp"
+            android:onClick="on_mmtrl_select">
+
+            <TextView
+                android:id="@+id/no_of_mtrls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/zonapro_bold"
+                android:gravity="center"
+                android:textColor="@color/blue"
+                android:textSize="30dp">
+
+            </TextView>
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="2px"
+                android:layout_below="@+id/tv_claims"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/grey">
+
+            </View>
+
+            <TextView
+                android:id="@+id/tv_claims"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="start"
+                android:lineSpacingExtra="5dp"
+                android:text="Marketing\nMaterial"
+                android:textColor="@color/blue"
+                android:textSize="18dp">
+
+            </TextView>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/rl_manager_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl1"
+        android:layout_centerVertical="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_sales"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@+id/line_centre_1"
+            android:background="@drawable/cardview_lightorange_margined"
+            android:backgroundTint="@color/greywhite"
+            android:elevation="10dp"
+            android:onClick="onSalesSelect">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"
+                android:text="Sales"
+                android:textColor="@color/blue"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/no_of_sales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/zonapro_bold"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/blue"
+                android:textSize="30dp">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@+id/line_centre_1"
+            android:background="@drawable/cardview_lightorange_margined"
+            android:backgroundTint="@color/greywhite"
+            android:elevation="10dp"
+            android:onClick="onTargetSelect">
+
+            <TextView
+                android:id="@+id/tv_target"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="start"
+                android:lineSpacingExtra="5dp"
+                android:text="Target"
+                android:textColor="@color/blue"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/mngr_target_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/tv_target"
+                android:fontFamily="@font/zonapro_bold"
+                android:text="(10)"
+                android:textColor="@color/blue"
+                android:textSize="18dp">
+
+            </TextView>
+
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/lineear_progress"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_above="@+id/mng_achieved_count"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:indeterminate="false"
+                app:indicatorColor="@color/blue"
+                app:trackColor="@color/grey"
+                app:trackCornerRadius="10dp"
+                app:trackThickness="5dp">
+
+            </com.google.android.material.progressindicator.LinearProgressIndicator>
+
+            <TextView
+                android:id="@+id/mng_achieved_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/zonapro_regular"
+                android:text="5/10"
+                android:textColor="@color/blue"
+                android:textSize="12dp">
+
+            </TextView>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_centre_1"
+            android:layout_width="1px"
+            android:layout_height="1px"
+            android:layout_centerInParent="true"
+            android:background="@color/orange">
+
+        </View>
+
+        <View
+            android:id="@+id/line_centre_2"
+            android:layout_width="1px"
+            android:layout_height="1px"
+            android:layout_below="@+id/rl_sales"
+            android:layout_centerHorizontal="true"
+            android:background="@color/orange">
+
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/rl_dealer"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/line_centre_2"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@+id/line_centre_1"
+            android:background="@drawable/cardview_lightorange_margined"
+            android:backgroundTint="@color/greywhite"
+            android:elevation="10dp"
+            android:onClick="on_mngr_daily">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="start"
+                android:lineSpacingExtra="5dp"
+                android:text="Daily Updates"
+                android:textColor="@color/blue"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/count_daily_updates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/zonapro_bold"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/blue"
+                android:textSize="30dp">
+
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_dealers"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/line_centre_2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@+id/line_centre_1"
+            android:background="@drawable/cardview_lightorange_margined"
+            android:backgroundTint="@color/greywhite"
+            android:elevation="10dp"
+            android:onClick="onDealerList">
+
+
+            <TextView
+                android:id="@+id/tv_dealers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="start"
+                android:lineSpacingExtra="5dp"
+                android:text="Dealers"
+                android:textColor="@color/blue"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_no_dealers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_dealers"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/blue"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_dealers"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/tv_no_dealers"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:text="(Total)"
+                android:textColor="@color/cement"
+                android:textSize="12dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/new_totdealers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_no_dealers"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/light_blue_wd"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_no_dealers"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/new_totdealers"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:text="(new)"
+                android:textColor="@color/cement"
+                android:textSize="12dp">
+
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/rl_dealers"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@+id/line_centre_1"
+            android:background="@drawable/cardview_lightorange_margined"
+            android:backgroundTint="@color/greywhite"
+            android:elevation="10dp"
+            android:onClick="on_mngr_InspSelect">
+
+
+            <TextView
+                android:id="@+id/tv_mngr_inspetions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="start"
+                android:lineSpacingExtra="5dp"
+                android:text="Inspections"
+                android:textColor="@color/blue"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/req_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_mngr_inspetions"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/blue"
+                android:textSize="22dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_mngr_inspetions"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:text="(Req. Count)"
+                android:textColor="@color/cement"
+                android:textSize="12dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/insp_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/req_count"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/light_blue_wd"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/req_count"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:text="(Insp. Count)"
+                android:textColor="@color/cement"
+                android:textSize="12dp">
+
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/rl_dealers"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@+id/line_centre_1"
+            android:background="@drawable/cardview_lightorange_margined"
+            android:backgroundTint="@color/greywhite"
+            android:elevation="10dp"
+            android:onClick="onMngrMtrlSelect">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="start"
+                android:lineSpacingExtra="5dp"
+                android:text="Marketing\nMaterial"
+                android:textColor="@color/blue"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_no_marketmtrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/blue"
+                android:textSize="30dp">
+
+            </TextView>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

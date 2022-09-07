@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/mtrl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/label"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Material 1"
+            android:textColor="@color/black"
+            android:textSize="14dp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_regular"
+            android:text="--"
+            android:textSize="14dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/count_mtrl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:hint="no."
+            android:textColor="@color/black"
+            android:inputType="number"
+            android:textSize="14dp">
+
+        </TextView>
+
+
+        <com.skyhope.showmoretextview.ShowMoreTextView
+            android:id="@+id/comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mtrl1"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/greywhite"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="start"
+            android:padding="5dp"
+            android:text="need logo of their own"
+            android:textSize="14dp">
+
+        </com.skyhope.showmoretextview.ShowMoreTextView>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/view_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mtrl1"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/comments"
+            android:background="@color/greywhite"
+            android:fontFamily="@font/poppins_regular"
+            android:padding="5dp"
+            android:text="@string/more"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/view_less"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mtrl1"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/comments"
+            android:background="@color/greywhite"
+            android:padding="5dp"
+            android:text="@string/less"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="14dp"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+   <!-- <TextView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_materials"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/more"
+        >
+
+    </TextView>
+    <TextView
+        android:id="@+id/less"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_materials"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="5dp"
+        android:text="View Less"
+        android:visibility="invisible">
+
+    </TextView>-->
+
+</RelativeLayout>

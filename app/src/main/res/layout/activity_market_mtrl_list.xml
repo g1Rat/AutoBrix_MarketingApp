@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MarketMtrlList">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/left_arrow">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/back"
+            android:fontFamily="@font/zonapro_semibold"
+            android:gravity="center"
+            android:text="Marketing Material"
+            android:textColor="@color/black"
+            android:textSize="16dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/month_picker"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/cardview_dealership"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="JUN-21"
+            android:textColor="@color/white"
+            android:textSize="14dp">
+
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl1"
+        android:layout_margin="5dp"
+        android:background="@drawable/searchbar_color">
+
+        <EditText
+            android:id="@+id/search_mrkt_mtrl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/cancel_btn"
+            android:layout_toRightOf="@+id/search_bar_img"
+            android:background="@null"
+            android:gravity="start"
+            android:hint="Search for a material status"
+            android:textSize="15dp">
+
+        </EditText>
+
+        <ImageView
+            android:id="@+id/search_bar_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/seach_icon">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/cancel_btn"
+            android:visibility="gone"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:onClick="oncancelSelect"
+            android:src="@drawable/cancel">
+
+        </ImageView>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progress_bar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/black"
+            android:layout_centerVertical="true">
+
+        </ProgressBar>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_standard"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl2"
+        android:layout_toLeftOf="@+id/line_centre"
+        android:onClick="onstandard_select">
+
+        <TextView
+            android:id="@+id/tv_standard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/zonapro_semibold"
+            android:gravity="center"
+            android:text="Standard"
+            android:textColor="@color/blue"
+            android:textSize="16dp">
+
+        </TextView>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/rl_standard"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_toLeftOf="@+id/line_centre"
+        android:background="@color/blue">
+
+    </View>
+    <View
+        android:id="@+id/line_centre"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:layout_centerHorizontal="true"
+        android:background="@color/orange">
+    </View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl2"
+        android:layout_toRightOf="@+id/line_centre"
+        android:onClick="oncustom_select">
+
+        <TextView
+            android:id="@+id/tv_custom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/zonapro_semibold"
+            android:gravity="center"
+            android:text="Customized"
+            android:textColor="@color/lightgrey"
+            android:textSize="16dp">
+
+        </TextView>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/rl_standard"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_toRightOf="@+id/line_centre"
+        android:background="@color/lightgrey">
+
+    </View>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/noresults"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="NO RESULTS FOUND"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/line2"
+        android:gravity="center">
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_mtrlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line2">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/blue"
+        android:src="@drawable/white_plus_icon"
+        >
+
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+</RelativeLayout>

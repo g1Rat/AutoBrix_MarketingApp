@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.2898148148148148" />
+        <entry key="../../../Library/Android/sdk/platforms/android-30/data/res/layout/simple_spinner_dropdown_item.xml" value="0.2953125" />
+        <entry key="app/src/main/res/drawable-v24/cardview_dealership.xml" value="0.1565" />
+        <entry key="app/src/main/res/drawable-v24/cardview_lightgrey_margined.xml" value="0.1565" />
+        <entry key="app/src/main/res/drawable-v24/cardview_lightorange_margined.xml" value="0.1565" />
+        <entry key="app/src/main/res/drawable/black_border.xml" value="0.2255" />
+        <entry key="app/src/main/res/drawable/cardview_blackbg.xml" value="0.2255" />
+        <entry key="app/src/main/res/drawable/emp_cv_lg.xml" value="0.1425" />
+        <entry key="app/src/main/res/drawable/green_progress.xml" value="0.171" />
+        <entry key="app/src/main/res/drawable/light_border.xml" value="0.2255" />
+        <entry key="app/src/main/res/drawable/scroll_indicator.xml" value="0.1565" />
+        <entry key="app/src/main/res/drawable/searchbar_color.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/submit_button_shape.xml" value="0.1565" />
+        <entry key="app/src/main/res/layout/activity_add_daily_update.xml" value="0.23934149430139298" />
+        <entry key="app/src/main/res/layout/activity_add_dealer.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_add_dealer_request.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_add_lead.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_add_market_mtrl.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_add_package.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_add_reminder.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_add_vehicle_category.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_attendance.xml" value="0.25170593261718743" />
+        <entry key="app/src/main/res/layout/activity_daily_update_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_dash_board_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_dealer_list_page.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_dealer_requests.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_expandable_listt_view.xml" value="0.22830269345874304" />
+        <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_landscape_page.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/activity_leads_list_page.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_market_mtrl_list.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_mngr_daily_updates.xml" value="0.21248396750748183" />
+        <entry key="app/src/main/res/layout/activity_mngr_insp_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_mngr_mtrl_list.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/activity_mngr_sales_page.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/activity_mngr_target_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_notification_page.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_otppage.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_profile_page.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_reminder_list.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_sales_list.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_sales_page.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/activity_search_dealer.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_select_car_brand.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_select_car_model.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_sign_in_page.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_table_layout.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_target_list.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/activity_todays_tasks.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_total_dealers.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_total_leads.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_total_reminders.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_total_sales.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/activity_update_dialog_reminders.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/cardview_lightgrey_margfined.xml" value="0.1085934159897392" />
+        <entry key="app/src/main/res/layout/dialog.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/dialog_camera_options.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/example.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/exit_dialog.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/item_loading.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/items_add_mtrl_list.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/items_car_makelist.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/items_carmodellists.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/items_dealer_lists.xml" value="0.29259338378906247" />
+        <entry key="app/src/main/res/layout/items_emp_dealerlist.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/items_emp_list.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/items_emp_target_list.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/items_employee.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/items_home_page.xml" value="0.14947916666666666" />
+        <entry key="app/src/main/res/layout/items_insp_comp_list.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/items_insp_veh_list.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/items_inspect_req_list.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/items_landsacpe_month_dates.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/items_landscape_cat_list.xml" value="0.2364258230012826" />
+        <entry key="app/src/main/res/layout/items_landscape_dealer_wise_list.xml" value="0.2364258230012826" />
+        <entry key="app/src/main/res/layout/items_landscape_emp_list.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/items_landscape_emp_wise_list.xml" value="0.2364258230012826" />
+        <entry key="app/src/main/res/layout/items_leads_list.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/items_marketing_material.xml" value="0.3217315673828125" />
+        <entry key="app/src/main/res/layout/items_material_required.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/items_material_status_list.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/items_mngr_emp_list.xml" value="0.19410004275331338" />
+        <entry key="app/src/main/res/layout/items_package_list.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/items_reminder_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/items_repair_lists.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/items_sales_list.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/items_search_leads.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/items_search_sales.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/items_service_list.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/items_service_req_list.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/items_todaystasks.xml" value="0.1515625" />
+        <entry key="app/src/main/res/layout/items_total_summary.xml" value="0.1515625" />
+        <entry key="app/src/main/res/layout/items_vehicle_category.xml" value="0.2424112868747328" />
+        <entry key="app/src/main/res/layout/items_vehicle_list.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/pop_up_calendar.xml" value="0.21248396750748183" />
+        <entry key="app/src/main/res/layout/popup_insp_completed_veh_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/popup_inspect_approved.xml" value="0.2657407407407407" />
+        <entry key="app/src/main/res/layout/popup_market_mtrl_status.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/task_update_dialog.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/update_dialog.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/menu/reminderlist_menu.xml" value="0.2953125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.23333333333333334" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

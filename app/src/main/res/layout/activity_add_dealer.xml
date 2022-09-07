@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddDealer"
+    tools:ignore="Deprecated"
+    android:background="@color/whitesmoke">
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/left_arrow">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/zonapro_semibold"
+            android:gravity="center"
+            android:text="ADD DEALER"
+            android:textColor="@color/black"
+            android:textSize="15dp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl2"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/grey">
+
+
+        <EditText
+            android:id="@+id/selected_no"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cardview_lightgrey_margined"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:hint="Enter dealer no"
+            android:inputType="number"
+            android:maxLength="10"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="16dp">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/check_dealer"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/selected_no"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/submit_button_shape"
+            android:fontFamily="@font/zonapro_semibold"
+            android:paddingLeft="30dp"
+            android:paddingTop="5dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="5dp"
+            android:text="Check "
+            android:textColor="@color/white"
+            android:textSize="14dp">
+
+        </Button>
+    </RelativeLayout>
+
+     <androidx.core.widget.NestedScrollView
+         android:visibility="gone"
+         android:id="@+id/sv"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@+id/rl_check">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_below="@+id/rl2"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/cardview_whitebg"
+            app:hintTextAppearance="@style/HintText">
+
+            <EditText
+                android:id="@+id/d_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Dealership Name*"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="12dp"
+
+                >
+
+            </EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/it1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/cardview_whitebg"
+            app:hintTextAppearance="@style/HintText"
+
+            >
+
+            <EditText
+                android:id="@+id/d_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:enabled="false"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Phone No.*"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="5dp"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="12dp"
+                >
+
+            </EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it4"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/it2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/cardview_whitebg"
+            app:hintTextAppearance="@style/HintText">
+
+            <EditText
+                android:id="@+id/no_of_cars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="No.Of Sold Cars"
+                android:inputType="number"
+                android:maxLength="5"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="12dp"
+
+                >
+
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it5"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/it4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/cardview_whitebg"
+            app:hintTextAppearance="@style/HintText"
+            >
+        <EditText
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address Line1*"
+        android:maxLines="1"
+        android:textSize="12dp"
+        android:background="@null"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textCursorDrawable="@drawable/cursor_color">
+        </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it7"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/it5"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/cardview_whitebg"
+            app:hintTextAppearance="@style/HintText">
+
+            <EditText
+                android:id="@+id/d_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="location *"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="12dp">
+
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/it8"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/it5"
+            android:layout_toRightOf="@+id/it7"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/cardview_whitebg"
+            app:hintTextAppearance="@style/HintText"
+            >
+
+            <EditText
+                android:id="@+id/pincode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Pincode*"
+                android:inputType="number"
+                android:maxLength="6"
+                android:padding="5dp"
+                android:textSize="12dp">
+
+            </EditText>
+            <ImageView
+                android:id="@+id/cancel_btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/cancel"
+                android:onClick="oncancelSelect"
+                android:visibility="gone">
+
+            </ImageView>
+
+
+        </RelativeLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it9"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/it7"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/cardview_whitebg"
+            app:hintTextAppearance="@style/HintText"
+            >
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:hint="City*"
+                android:textSize="12dp"
+                android:inputType="text"
+                android:background="@null"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textCursorDrawable="@drawable/cursor_color"
+                >
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it10"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/it8"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/it9"
+            android:background="@drawable/cardview_whitebg"
+            app:hintTextAppearance="@style/HintText">
+
+            <EditText
+                android:id="@+id/state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:editable="false"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="State*"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="12dp"></EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it14"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/it10"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/cardview_whitebg"
+            app:hintTextAppearance="@style/HintText">
+
+            <EditText
+                android:id="@+id/owner_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Owner Name*"
+                android:maxLines="1"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                android:padding="5dp"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="12dp">
+
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it15"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/it14"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/cardview_whitebg"
+            app:hintTextAppearance="@style/HintText"
+            >
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:hint="Email(Optional)"
+                android:textSize="12dp"
+                android:background="@null"
+                android:inputType="textEmailAddress"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textCursorDrawable="@drawable/cursor_color">
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:visibility="gone"
+            android:id="@+id/it16"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/it15"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/cardview_whitebg"
+            app:hintTextAppearance="@style/HintText"
+            >
+            <EditText
+                android:id="@+id/manager_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:hint="Dealer Manager Name"
+                android:textSize="12dp"
+                android:inputType="text"
+                android:background="@null"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textCursorDrawable="@drawable/cursor_color">
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/it17"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/it16"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/cardview_whitebg"
+            app:hintTextAppearance="@style/HintText"
+            >
+
+            <EditText
+                android:id="@+id/manager_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Dealer manager NO."
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="5dp"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="12dp">
+
+            </EditText>
+
+       </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/it17"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Dealer Logo"
+            android:textSize="12dp">
+
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/rl5"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/tv1"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/addimage_bg"
+
+            >
+
+            <ImageView
+                android:id="@+id/dealer_logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/camer_icon">
+
+            </ImageView>
+        </RelativeLayout>
+
+           <RelativeLayout
+               android:id="@+id/rl4"
+               android:layout_width="match_parent"
+               android:layout_height="30dp"
+               android:layout_below="@+id/rl5"
+               android:layout_marginLeft="25dp"
+               android:layout_marginBottom="5dp"
+               android:layout_marginTop="15dp"
+               android:layout_marginRight="15dp"
+           >
+
+               <CheckBox
+                   android:id="@+id/checkbox"
+                   android:layout_width="wrap_content"
+                   android:layout_height="25dp"
+                   android:layout_centerVertical="true"
+                   android:text="Sell Luxury Cars?">
+
+               </CheckBox>
+
+         </RelativeLayout>
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/submit_button_shape"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="10dp"
+            android:text="SUBMIT"
+            android:textColor="@color/white"
+            android:textSize="16dp">
+
+        </Button>
+    </RelativeLayout>
+
+     </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

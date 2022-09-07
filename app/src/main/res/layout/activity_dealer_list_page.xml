@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DealerListPage"
+   >
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/left_arrow">
+
+        </ImageView>
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/left_arrow">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/zonapro_semibold"
+            android:gravity="center"
+            android:text="MY DEALERS"
+            android:textColor="@color/black"
+            android:textSize="17dp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl1"
+        android:layout_margin="5dp"
+        android:background="@drawable/searchbar_color">
+
+
+        <EditText
+            android:id="@+id/search_dealer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:background="@null"
+            android:gravity="center|start"
+            android:hint="Search for a Dealer"
+            android:maxLines="1">
+
+        </EditText>
+        <ImageView
+            android:id="@+id/search_bar_img"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/seach_icon"
+            android:layout_centerVertical="true"
+            >
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/cancel_btn"
+            android:visibility="gone"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cancel"
+            android:onClick="oncancelSelect">
+
+        </ImageView>
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progress"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/black"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true">
+
+        </ProgressBar>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl2"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/noresults"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="NO RESULTS FOUND"
+            android:gravity="center">
+        </TextView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/submit_button_shape"
+            android:layout_centerHorizontal="true"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="15dp"
+            >
+        </Button>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/iv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/blue"
+            android:src="@drawable/white_plus_icon">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+    </RelativeLayout>
+
+</RelativeLayout>

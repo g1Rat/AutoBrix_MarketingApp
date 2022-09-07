@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchDealer">
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:src="@drawable/left_arrow">
+    </ImageView>
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv1"
+        android:background="@drawable/square"
+        android:layout_marginTop="5dp">
+
+        <EditText
+            android:id="@+id/search_dealer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:background="@null"
+            android:gravity="center|start"
+            android:hint="Search for a Dealer"
+            android:maxLines="1">
+
+        </EditText>
+
+        <ImageView
+            android:id="@+id/search_bar_img"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/seach_icon">
+
+        </ImageView>
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/cancel_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cancel"
+            android:onClick="oncancelSelect">
+
+        </ImageView>
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progress"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true">
+
+        </ProgressBar>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl1">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/noresults"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="NO RESULTS FOUND"
+            android:gravity="center">
+        </TextView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+    <Button
+        android:visibility="gone"
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/submit_button_shape"
+        android:layout_centerHorizontal="true"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        >
+    </Button>
+
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+   android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f6f6f6"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/tv_dealername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/zonapro_semibold"
+            android:text="Sagar Cars"
+            android:textColor="@color/black"
+            android:textSize="16dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_dealer_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_dealername"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/zonapro_regular"
+            android:text="3rd OCT 2021"
+            android:textColor="@color/black"
+            android:textSize="12dp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/brand_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/bentley">
+
+        </ImageView>
+
+        <TextView
+
+            android:id="@+id/veh_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/brand_logo"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/zonapro_bold"
+            android:text="KA04AB1234"
+            android:textColor="@color/orange"
+            android:textSize="14dp">
+
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/rl_veh_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_dealer_no"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/zonapro_bold"
+                android:text="BENTLEY"
+                android:textColor="@color/black"
+                android:textSize="16dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_fueltype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_model"
+                android:fontFamily="@font/zonapro_regular"
+                android:text="Petrol"
+                android:textColor="@color/black"
+                android:textSize="12dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_trans_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_model"
+                android:layout_toRightOf="@+id/tv_fueltype"
+                android:fontFamily="@font/zonapro_regular"
+                android:gravity="start"
+                android:text=", Automatic"
+                android:textColor="@color/black"
+                android:textSize="12dp">
+
+            </TextView>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rl_veh_details"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/rl_insp_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/zonapro_regular"
+                android:gravity="center"
+                android:text="Inspection"
+                android:textColor="@color/blue"
+                android:textSize="14dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/insp_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:text="Requested"
+                android:textColor="@color/blue"
+                android:textSize="12dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/no_kms"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:text="45 days"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:visibility="gone">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/no_kms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/zonapro_semibold"
+                android:gravity="center"
+                android:text="2000 kms"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:visibility="gone">
+
+            </TextView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

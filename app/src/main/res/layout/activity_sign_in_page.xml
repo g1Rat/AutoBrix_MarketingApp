@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SignInPage">
+
+    <ImageView
+        android:id="@+id/iv_appicon"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/app_icon1">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:id="@+id/rl_mobileno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_appicon"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/zonapro_semibold"
+            android:gravity="center"
+            android:text="Mobile Number"
+            android:textColor="@color/black"
+            android:textSize="18dp">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/selected_mobileno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:fontFamily="@font/zonapro_regular"
+            android:gravity="start"
+            android:hint="90000 9000"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textColor="@color/black"
+            android:textColorHint="@color/lightgrey"
+            android:textSize="18dp">
+
+        </EditText>
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5px"
+            android:layout_below="@+id/selected_mobileno"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/lightgrey">
+        </View>
+
+    </RelativeLayout>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_mobileno"
+        android:fontFamily="@font/zonapro_semibold"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:text="OTP"
+        android:textColor="@color/black"
+        android:textSize="18dp">
+    </TextView>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/otp_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_otp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@null"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/cardview_lightgrey_margined">
+
+            <EditText
+                android:id="@+id/otp1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:fontFamily="@font/zonapro_bold"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+
+                >
+
+            </EditText>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="35dp"
+            android:layout_weight="0"
+            android:background="@drawable/cardview_lightgrey_margined">
+
+            <EditText
+                android:id="@+id/otp2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:fontFamily="@font/zonapro_bold"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="20dp"></EditText>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="35dp"
+            android:layout_weight="0"
+            android:background="@drawable/cardview_lightgrey_margined">
+
+            <EditText
+                android:id="@+id/otp3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@null"
+                android:fontFamily="@font/zonapro_bold"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="35dp"
+            android:layout_weight="0"
+            android:background="@drawable/cardview_lightgrey_margined">
+
+            <EditText
+                android:id="@+id/otp4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:fontFamily="@font/zonapro_bold"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="20dp"></EditText>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_toRightOf="@+id/otp_ll">
+
+    </View>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_resend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/otp_ll"
+        android:layout_toLeftOf="@+id/view1"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/zonapro_semibold"
+        android:text="RESEND"
+        android:textColor="@color/blue"
+        android:textSize="16dp">
+    </TextView>
+
+
+    <TextView
+
+        android:id="@+id/tv_sendotp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_mobileno"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/cardview_dealership"
+        android:backgroundTint="#f8f8f8"
+        android:fontFamily="@font/zonapro_semibold"
+        android:gravity="center"
+        android:paddingLeft="45dp"
+        android:paddingTop="10dp"
+        android:paddingRight="45dp"
+        android:paddingBottom="10dp"
+        android:text="SEND OTP"
+        android:textColor="@color/blue"
+        android:textSize="18dp">
+
+    </TextView>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:backgroundTint="@color/blue"
+        android:background="@drawable/cardview_dealership"
+        android:gravity="center"
+        android:text="Login"
+        android:textSize="18dp"
+        android:fontFamily="@font/zonapro_semibold"
+        android:textColor="@color/white">
+
+    </TextView>
+
+</RelativeLayout>

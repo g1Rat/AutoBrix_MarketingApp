@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/mtrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center_vertical"
+        android:text="Material"
+        android:textColor="@color/black"
+        android:textSize="16dp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/count_mtrl"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/grey"
+        android:fontFamily="@font/zonapro_semibold"
+        android:gravity="center"
+        android:maxLength="3"
+        android:hint="count"
+        android:inputType="number"
+        android:textColorHint="@color/greywhite"
+        android:textSize="16dp">
+
+    </EditText>
+
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/comments"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/count_mtrl"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:maxLines="3"
+        android:maxLength="100"
+        android:background="@color/greywhite"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="start"
+        android:hint="comments"
+        android:padding="10dp"
+        android:textColorHint="@color/grey"
+        android:textSize="16dp">
+
+    </EditText>
+    <View
+        android:id="@+id/tv5"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/comments"
+        android:background="@color/grey">
+
+    </View>
+</RelativeLayout>
